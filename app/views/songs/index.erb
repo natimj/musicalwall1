@@ -1,0 +1,12 @@
+<h1>All songs</h1>
+
+<% @songs.each do |song| %>
+  <div class="song">
+    <h3>
+      <a href="/songs/<%= song.id %>"><%=song.title %></a>
+      <small>(by: <%= song.author %>)</small>
+    </h3>
+  <div>
+<% end %>
+
+<h4>To POST songs, click <a href="/songs/new">HERE</a></h4>
